@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-import { debug } from '../common/Debug.js';
-
 import removeFolder from 'rimraf';
 import * as childProcess from 'child_process';
 import { assert } from '../common/assert.js';
@@ -28,6 +26,7 @@ import { Product } from '../common/Product.js';
 import * as readline from 'readline';
 import { TimeoutError } from '../common/Errors.js';
 import { promisify } from 'util';
+import debug from 'debug';
 
 const removeFolderAsync = promisify(removeFolder);
 const debugLauncher = debug('puppeteer:launcher');
